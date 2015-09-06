@@ -7,4 +7,6 @@
     <string name="Error_Message">There was an unkown error. Please try again.</string>
     <string name="Error_OkButton_Text">OK</string>
     <string name="Network_Unavailable_Message">Please make sure you are connected to the internet.</string>
+    <string name="title_activity_daily_forecast">DailyForecastActivity</string>
+    <string name="no_daily_forecast_data">There is no data to display.</string>
 </resources>

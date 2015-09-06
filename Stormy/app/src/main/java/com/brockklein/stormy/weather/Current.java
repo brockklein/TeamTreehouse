@@ -1,4 +1,6 @@
-package com.brockklein.stormy;
+package com.brockklein.stormy.weather;
+
+import com.brockklein.stormy.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -7,11 +9,11 @@ import java.util.TimeZone;
 /**
  * Created by BrockKlein on 7/5/15.
  */
-public class CurrentWeather {
+public class Current {
     private String mIcon;
     private Long mTime;
     private double mTemperature;
-    private double mHumidityl;
+    private double mHumidity;
     private double mPrecipChance;
     private String mSummary;
     private String mTimeZone;
@@ -72,13 +74,16 @@ public class CurrentWeather {
         return timeString;
     }
 
-    public double getTemperature() {return mTemperature;}
+    public int getTemperature() {return (int)Math.round(mTemperature);}
     public void setTemperature(double temperature) {mTemperature = temperature;}
 
-    public double getHumidityl() {return mHumidityl;}
-    public void setHumidityl(double humidityl) {mHumidityl = humidityl;}
+    public double getHumidity() {return mHumidity;}
+    public void setHumidity(double humidityl) {
+        mHumidity = humidityl;}
 
-    public double getPrecipChance() {return mPrecipChance;}
+    public int getPrecipChance() {
+        double precipPercentage = mPrecipChance * 100;
+        return (int)Math.round(precipPercentage);}
     public void setPrecipChance(double precipChance) {mPrecipChance = precipChance;}
 
     public String getSummary() {return mSummary;}
